@@ -2,7 +2,7 @@ name: release version
 on:
   push:
     branches:
-      - production
+      - master
 jobs:
   release:
     name: Release
@@ -11,18 +11,21 @@ jobs:
       - uses: actions/checkout@v2
       - name: get old changelog length
         run: |
-          ls .
-          OLD_CHANGELOG_LENGTH = wc -l < ./CHANGELOG.md
+          echo "old_changelog_length=$(wc -l <./CHANGELOG.md)" >> $GITHUB_ENV
       - uses: actions/setup-node@v1
         with:
           node-version: 12
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_AUTHOR_NAME: release-bot
+          GIT_AUTHOR_EMAIL: release@sperek.com
+          GIT_COMMITTER_NAME: release-bot
+          GIT_COMMITTER_EMAIL: release@sperek.com
         run: npx standard-version
       - name: get changelog diff
         run: |
-         NEW_CHANGELOG_LENGTH = wc -l < ./CHANGELOG.md 
-         NEW_LINES_COUNT =$(expr $NEW_CHANGELOG_LENGTH - $OLD_CHANGELOG_LENGTH)
+         NEW_CHANGELOG_LENGTH=$(wc -l < ./CHANGELOG.md)
+         NEW_LINES_COUNT=$(expr $NEW_CHANGELOG_LENGTH - ${{ env.old_changelog_length }})
          cat ./CHANGELOG.md | head -n $NEW_LINES_COUNT > notification.md
          cat notification.md 
