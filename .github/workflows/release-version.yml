@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: get old changelog length
-        run: OLD_CHANGELOG_LENGTH = wc -l < CHANGELOG.md
+        run: OLD_CHANGELOG_LENGTH = wc -l < ./CHANGELOG.md
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -20,7 +20,7 @@ jobs:
         run: npx standard-version
       - name: get changelog diff
         run: |
-         NEW_CHANGELOG_LENGTH = wc -l < CHANGELOG.md 
+         NEW_CHANGELOG_LENGTH = wc -l < ./CHANGELOG.md 
          NEW_LINES_COUNT =$(expr $NEW_CHANGELOG_LENGTH - $OLD_CHANGELOG_LENGTH)
          cat CHANGELOG.md | head -n $NEW_LINES_COUNT > notification.md
-         cat notification.md 
+         cat ./notification.md 
