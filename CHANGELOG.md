@@ -19,6 +19,26 @@ All notable changes to this project will be documented in this file. See [standa
 * fixing fixes ([7a01567](https://github.com/Peroniada/conventional-test/commit/7a0156723525ef36f044312c5f66dc22cd3315bc))
 * pls work ([e40e3a7](https://github.com/Peroniada/conventional-test/commit/e40e3a751d1818987a86760ed565c895926e37dd))
 * publishing version on master pls ([d2134bd](https://github.com/Peroniada/conventional-test/commit/d2134bde0e46db3bbf7b4b62688980f4df20d303))
+* work pls ([3225ed2](https://github.com/Peroniada/conventional-test/commit/3225ed2c925379c15d9bc24e0151c7b32a9ba55f))
+* work pls ([c6ea763](https://github.com/Peroniada/conventional-test/commit/c6ea7638f01baa9e71a6aa851dfc01af607cd84f))
+
+## [2.1.0](https://github.com/Peroniada/conventional-test/compare/v2.0.0...v2.1.0) (2021-05-05)
+
+
+### Features
+
+* added flow for version release ([4c52882](https://github.com/Peroniada/conventional-test/commit/4c52882a7839d57c539bddbb8b3a61bfb478863d))
+* added push command to flow ([e594183](https://github.com/Peroniada/conventional-test/commit/e594183bf88b8230046dbff1b0a69f2764226a16))
+* new feature ([f1b0d32](https://github.com/Peroniada/conventional-test/commit/f1b0d32cb54a1aefc441e00fbde1249c1d83679f))
+* yet another feature ([3b3e465](https://github.com/Peroniada/conventional-test/commit/3b3e465ebf0e55626931f0356619235356afc6a8))
+
+
+### Bug Fixes
+
+* checkout to release branch ([ffbe92a](https://github.com/Peroniada/conventional-test/commit/ffbe92a41681b5a2ba2cb8d90d0da5e3533e5f8f))
+* fixing fixes ([7a01567](https://github.com/Peroniada/conventional-test/commit/7a0156723525ef36f044312c5f66dc22cd3315bc))
+* pls work ([e40e3a7](https://github.com/Peroniada/conventional-test/commit/e40e3a751d1818987a86760ed565c895926e37dd))
+* publishing version on master pls ([d2134bd](https://github.com/Peroniada/conventional-test/commit/d2134bde0e46db3bbf7b4b62688980f4df20d303))
 * work pls ([c6ea763](https://github.com/Peroniada/conventional-test/commit/c6ea7638f01baa9e71a6aa851dfc01af607cd84f))
 
 ## [2.1.0](https://github.com/Peroniada/conventional-test/compare/v2.0.0...v2.1.0) (2021-05-05)
