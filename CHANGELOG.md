@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Peroniada/conventional-test/compare/v1.0.0...v1.1.0) (2021-05-05)
+
+
+### Features
+
+* new feature ([d9c0545](https://github.com/Peroniada/conventional-test/commit/d9c0545c683bd88a54278f4ec9a1a53351224b90))
+
+
+### Bug Fixes
+
+* new feature fix ([fd406a6](https://github.com/Peroniada/conventional-test/commit/fd406a6d7ed0dc7afbc6acef7edf3e46f4ec108e))
+
 ## 1.0.0 (2021-05-05)
 
 
