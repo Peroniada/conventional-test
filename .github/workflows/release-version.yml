@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: get old changelog length
         run: |
           echo "old_changelog_length=$(wc -l <./CHANGELOG.md)" >> $GITHUB_ENV
@@ -28,4 +31,6 @@ jobs:
          NEW_CHANGELOG_LENGTH=$(wc -l < ./CHANGELOG.md)
          NEW_LINES_COUNT=$(expr $NEW_CHANGELOG_LENGTH - ${{ env.old_changelog_length }})
          cat ./CHANGELOG.md | head -n $NEW_LINES_COUNT > notification.md
-         cat notification.md 
+         cat notification.md
+         APP_VERSION=$(git describe --tags --abbrev=0) 
+         git push -uf origin release/$APP_VERSION
