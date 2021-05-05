@@ -33,4 +33,7 @@ jobs:
          cat ./CHANGELOG.md | head -n $NEW_LINES_COUNT > notification.md
          cat notification.md
          APP_VERSION=$(git describe --tags --abbrev=0) 
-         git push -uf origin release/$APP_VERSION
+         BRANCH_NAME=release/$APP_VERSION
+         git checkout -b $BRANCH_NAME
+         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+         git push --set-upstream origin $BRANCH_NAME
